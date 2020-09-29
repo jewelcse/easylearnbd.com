@@ -1,0 +1,12 @@
+.author-post{
+    display: block;
+    padding: 10px 12px 10px;
+}
+.author-post .card-title{
+    margin-left: 10px;
+}
+
+.img-for-post{
+    border-radius: 0px !important;
+    height: auto;
+}
