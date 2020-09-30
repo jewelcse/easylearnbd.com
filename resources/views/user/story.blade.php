@@ -2,11 +2,54 @@
 
 @section('content')
 
-<!-- Begin Article
-================================================== -->
-<div class="container">
-    <div class="row">
+    <style>
+        body.modal-open .bg{
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        }
 
+        .modal {
+            position: fixed;
+            top: 50% !important;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /*body.modal-open .modal {*/
+        /*    display: flex !important;*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*}*/
+
+        /*body.modal-open .modal .modal-dialog {*/
+        /*    margin: auto;*/
+        /*}*/
+    </style>
+
+<!-- Begin Article-->
+<div class="container bg">
+    @if (count($errors) > 0)
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Yah!</strong>
+        @foreach ($errors->all() as $error)
+            {{ $error }}
+        @endforeach
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
+
+
+    @if (session('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('status') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+    @endif
+
+    <div class="row">
         <!-- Begin Fixed Left Share -->
         <div class="col-md-2 col-xs-12">
             <div class="share">
@@ -110,7 +153,7 @@
 <div class="hideshare"></div>
 
 <!-- Begin Related -->
-<div class="graybg">
+<div class="graybg bg">
     <div class="container">
         <div class="row listrecent listrelated">
 
@@ -243,20 +286,41 @@
         </div>
     </div>
 </div>
-<!-- End Related Posts
-================================================== -->
+<!-- End Related Posts-->
 
 
-<!-- Begin AlertBar
-================================================== -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-dialog-centered">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Get Updates</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <form action="{{route('store.email')}}" method="POST" class="">
+                    @csrf
+                    <input type="email" class="form-control mb-2" name="email" placeholder="Enter your Email">
+                    <button class="btn subscribe">subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Begin AlertBar-->
 <div class="alertbar">
     <div class="container text-center">
         <img src="assets/img/logo.png" alt=""> &nbsp; Never miss a
         <b>story</b> from us, get weekly updates in your inbox.
-        <a href="#" class="btn subscribe">Get Updates</a>
+            <button data-toggle="modal" class="btn subscribe" data-target="#exampleModalCenter">
+                Get Updates
+            </button>
     </div>
 </div>
-<!-- End AlertBar
-================================================== -->
+<!-- End AlertBar -->
 
 @endsection

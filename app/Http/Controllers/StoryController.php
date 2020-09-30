@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin;
+use App\Notifications\NewAuthorStory;
 use App\Story;
 use App\StoryImage;
 use App\User;
@@ -9,6 +11,7 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -90,6 +93,10 @@ class StoryController extends Controller
         ]);
         $story->tag($tags);
 
+
+        $admins = Admin::all();
+
+        Notification::send($admins,new NewAuthorStory($story));
 //
 //        $userId = Auth::user()->id;
 //        $user = User::find($userId);

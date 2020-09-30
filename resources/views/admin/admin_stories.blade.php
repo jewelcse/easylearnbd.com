@@ -54,7 +54,7 @@
                                     @if($story->is_published == 1)
                                         <p id="currentStatus">Published</p>
                                     @else
-                                       <p id="currentStatus">Draft</p>
+                                       <p id="currentStatus">Pending</p>
                                     @endif
 
                                 </td>

@@ -35,7 +35,12 @@
                         <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
+                    @if($story->is_published == false)
                     <button class="btn btn-success">Publish</button>
+                    @else
+                        <button class="btn btn-success" disabled>Approved</button>
+                    @endif
+
                 </form>
 
 {{--                <a href="{{url('admin/stories/publish',$story->id)}}">--}}

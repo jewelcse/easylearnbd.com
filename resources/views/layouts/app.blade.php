@@ -139,7 +139,7 @@
         </div>
 
         <!-- Begin Footer-->
-        <div class="footer">
+        <div class="footer bg">
             <div class="container">
                 <div class="row" style="color: black">
                     <div class="col-sm-6 col-md-3 item">

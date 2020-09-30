@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="" />
+    <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_stories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_stories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_story_review.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_story_review.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/story.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +47,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -132,6 +164,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1h8375mZuwc9qsPa0PkOWoyydp0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -139,25 +172,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/asset/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\img" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\bootstrap" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\loader" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin\Auth\Auth" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\public\tinymce\plugin\tinymce" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\public\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\img" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\bootstrap" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\loader" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,11 +239,26 @@
       <workItem from="1601141773372" duration="18515000" />
       <workItem from="1601270232473" duration="5251000" />
       <workItem from="1601291458447" duration="35144000" />
+      <workItem from="1601340596813" duration="4917000" />
+      <workItem from="1601468538077" duration="9189000" />
+      <workItem from="1601479631277" duration="1734000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1601224065060">
@@ -245,6 +293,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="156" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600436943900" />
+    <state x="436" y="86" key="NewPhpClassDialog" timestamp="1601476064623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="436" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1601476064623" />
     <state x="518" y="287" key="NewPhpFileDialog" timestamp="1601317775103">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

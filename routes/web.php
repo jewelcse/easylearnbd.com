@@ -16,8 +16,12 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+Route::post('/subscribe','SubscriberController@storeEmail')->name('store.email');
+
 //Auth::routes(); // must be bellow of login and register route
 Auth::routes(['verify' => true]);
+
+
 /*
  * Story and state routes
  */
@@ -116,6 +120,9 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
     Route::post('/category/update/{id}','CategoryController@updateCategory'); // store category
 
     Route::post('/category/delete/{id}','CategoryController@deleteCategory');// delete category
+
+    Route::get('/subscribers','SubscriberController@fetchAllSubscriber');// all subscriber
+    Route::post('/subscribers/remove/{id}','SubscriberController@removeSubscriber');// all subscriber
 
 
     /*

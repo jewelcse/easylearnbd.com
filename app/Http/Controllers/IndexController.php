@@ -28,10 +28,32 @@ class IndexController extends Controller
     {
         $stories = Story::where('is_published',1)->get();
         $categories = Category::all();
+
+        $featureStories = array();
+        foreach ($stories as $story){
+           $featureStories[$story->id]= ceil((($story->views_count)*ceil(str_word_count($story->body)/200))%100);
+        }
+
+        arsort($featureStories);
+
+        $newarray = array_slice($featureStories, 0, 3) ;
+
+        foreach ($newarray as $key => $value1){
+
+            echo "key=".$key."value=".$value1."<br>";
+        }
+
+//        foreach ($featureStories as $key=>$value){
+//            echo 'key='.$key . ' value='. $value."<br>";
+//        }
+        //echo $newArray = array_slice($featureStories, 0, 2, true);
+
+
 //        $data = array(
 //          'stories'=>$stories,
 //            'categories'=>$categories
 //        );
+
 
 
         //return view('index',compact('stories'));
