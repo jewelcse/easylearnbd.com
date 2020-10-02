@@ -6,14 +6,7 @@
 @section('content')
     <!-- Begin Category -->
     <div class="container">
-        <div class="mainheading">
-            <p class="lead text-center">
-                @foreach($categories as $category)
-                    <a href="{{route('category.story',$category->slug)}}" class="mr-2">[{{$category->name}}]</a>
-                @endforeach
-            </p>
-        </div>
-        <!-- End Category-->
+        <!-- Begin List Posts-->
 
         <div class="row">
             <div class="col-md-12">
@@ -23,12 +16,20 @@
                 </form>
             </div>
         </div>
-        <!-- Begin List Posts-->
         <section class="recent-posts">
             <div class="section-title">
-                <h2><span>{{$category_name}}</span></h2>
+                <h2><span>{{$stories->count()}} stories are available for- {{$query }}</span></h2>
             </div>
+
+            @if($stories->count() == 0)
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center">No stories found! for- {{$query }}</h3>
+                    </div>
+                </div>
+            @endif
             <div class="card-columns listrecent">
+
             @foreach($stories as $story)
                 <!-- begin post -->
                     <div class="card">

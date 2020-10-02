@@ -18,7 +18,7 @@ class ShowStoryController extends Controller
         $story->views_count = $story->views_count+1;
         $story->save();
         //return $story->views_count;
-        return view('user.story',compact('story'));
+        return view('story',compact('story'));
     }
 
     public function authorStories($slug){

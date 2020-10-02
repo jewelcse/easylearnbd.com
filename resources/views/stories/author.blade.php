@@ -22,14 +22,6 @@
 
                             <span class="author-description">{!! $author->bio !!}</span> <br>
 
-{{--                            <div class="sociallinks">--}}
-
-{{--                                <a  target="_blank" href="https://www.facebook.com/wowthemesnet/"><i class="fa fa-facebook"></i></a>--}}
-{{--                                <span class="dot"></span>--}}
-{{--                                <a target="_blank" href="https://plus.google.com/s/wowthemesnet/top"><i class="fa fa-google-plus"></i></a>--}}
-
-{{--                            </div>--}}
-
                             <a target="_blank" href="#" class="btn follow">Follow</a>
 
                         </div>
@@ -69,7 +61,7 @@
 									        </span>
                                             <span class="author-meta">
 									            <span class="post-name">{{$author->first_name}} {{$author->last_name}}</span><br/>
-									            <span class="post-date">{{$story->created_at->format('j F Y') }}</span><span class="dot"></span><span class="post-read">6 min read</span>
+									            <span class="post-date">{{$story->created_at->format('j F Y') }}</span><span class="dot"></span><span class="post-read">{{ceil((str_word_count($story->body)/200))}} min read</span>
 									        </span>
                                         </div>
                                     </div>

@@ -10,3 +10,54 @@
     border-radius: 0px !important;
     height: auto;
 }
+
+
+/*
+Subscribe design
+ */
+
+body.modal-open .bg{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.modal {
+    position: fixed;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style the search field */
+form.example input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: 1px solid #cfcfcf;
+    float: left;
+    width: 80%;
+    background: #fdfdfd;
+}
+
+/* Style the submit button */
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #1C9963;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #1b4c7c;
+}
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}

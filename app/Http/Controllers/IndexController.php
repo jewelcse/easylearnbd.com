@@ -29,19 +29,19 @@ class IndexController extends Controller
         $stories = Story::where('is_published',1)->get();
         $categories = Category::all();
 
-        $featureStories = array();
-        foreach ($stories as $story){
-           $featureStories[$story->id]= ceil((($story->views_count)*ceil(str_word_count($story->body)/200))%100);
-        }
-
-        arsort($featureStories);
-
-        $newarray = array_slice($featureStories, 0, 3) ;
-
-        foreach ($newarray as $key => $value1){
-
-            echo "key=".$key."value=".$value1."<br>";
-        }
+//        $featureStories = array();
+//        foreach ($stories as $story){
+//           $featureStories[$story->id]= ceil((($story->views_count)*ceil(str_word_count($story->body)/200))%100);
+//        }
+//
+//        arsort($featureStories);
+//
+//        $newarray = array_slice($featureStories, 0, 3) ;
+//
+//        foreach ($newarray as $key => $value1){
+//
+//            echo "key=".$key."value=".$value1."<br>";
+//        }
 
 //        foreach ($featureStories as $key=>$value){
 //            echo 'key='.$key . ' value='. $value."<br>";
@@ -76,6 +76,19 @@ class IndexController extends Controller
             ->with('categories',$categories)
             ->with('category_name',$category->name);
 
+    }
+
+    public function search(Request $request){
+
+        $query = $request->get('query');
+
+        $stories = Story::where('title','LIKE',"%$query%")->where('is_published',true)->get();
+
+        return view('search',compact('stories','query'));
+    }
+
+    public function createStoryRules(){
+        return view('rules');
     }
 
 

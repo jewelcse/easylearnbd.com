@@ -18,6 +18,11 @@ Route::get('/register', function () {
 
 Route::post('/subscribe','SubscriberController@storeEmail')->name('store.email');
 
+Route::get('/search','IndexController@search')->name('story.search');
+
+
+Route::get('/create','IndexController@createStoryRules')->name('story.create.rules');
+
 //Auth::routes(); // must be bellow of login and register route
 Auth::routes(['verify' => true]);
 
@@ -31,7 +36,7 @@ Route::get('/stories','StoryController@stories')
     ->name('author.stories')->middleware('verified'); // for author published stories route
 
 
-Route::get('/stories/{slug}','ShowStoryController@fetchSingleStory')
+Route::get('/s/{slug}','ShowStoryController@fetchSingleStory')
     ->name('single.story'); // for index single item view
 Route::get('/author/{slug}','ShowStoryController@authorStories')
     ->name('author.profile'); // for author view with his published stories
@@ -58,7 +63,7 @@ Route::post('/user/profile/update','UserController@updateUserProfile')
  */
 
 Route::get('/', 'IndexController@index');
-Route::get('/s/{slug}', 'IndexController@storiesByCategory')->name('category.story');
+Route::get('/c/{slug}', 'IndexController@storiesByCategory')->name('category.story');
 
 
 

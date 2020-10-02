@@ -3,7 +3,29 @@
 @section('content')
 
     <!-- Begin Article-->
-    <div class="container">
+    <div class="container bg">
+
+        @if (count($errors) > 0)
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Yah!</strong>
+                @foreach ($errors->all() as $error)
+                    {{ $error }}
+                @endforeach
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
+
+        @if (session('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('status') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
         <div class="row">
 
             <!-- Begin Fixed Left Share -->
@@ -66,7 +88,7 @@
                             <span class="author-description"> {!! $story->user->bio !!}</span><br>
                             <span class="post-date">{{$story->created_at->format('j F Y') }}</span>
                             <span class="dot"></span>
-                            <span class="post-read">6 min read</span>
+                            <span class="post-read">{{ceil((str_word_count($story->body)/200))}} min read</span>
                         </div>
                     </div>
                     <!-- End Top Menta -->
@@ -242,20 +264,41 @@
             </div>
         </div>
     </div>
-    <!-- End Related Posts
-    ================================================== -->
+    <!-- End Related Posts-->
 
 
-    <!-- Begin AlertBar
-    ================================================== -->
-    <div class="alertbar">
-        <div class="container text-center">
-            <img src="assets/img/logo.png" alt=""> &nbsp; Never miss a
-            <b>story</b> from us, get weekly updates in your inbox.
-            <a href="#" class="btn subscribe">Get Updates</a>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-dialog-centered">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Get Updates</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <form action="{{route('store.email')}}" method="POST" class="">
+                        @csrf
+                        <input type="email" class="form-control mb-2" name="email" placeholder="Enter your Email">
+                        <button class="btn subscribe">subscribe</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- End AlertBar
-    ================================================== -->
+
+
+    <!-- Begin AlertBar-->
+    <div class="alertbar">
+        <div class="container text-center">
+            <img src="{{url('assets/img/C.png')}}"  alt="logo"> &nbsp; Never miss a
+            <b>story</b> from us, get daily updates in your inbox.
+            <button data-toggle="modal" class="btn subscribe" data-target="#exampleModalCenter">
+                Get Updates
+            </button>
+        </div>
+    </div>
+    <!-- End AlertBar -->
 
 @endsection

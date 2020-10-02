@@ -59,7 +59,7 @@
             <div class="container">
                 <!-- Begin Logo -->
                 <a id="textPrevent" class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{url('assets/img/logo.png')}}" alt="logo">
+                    <img src="{{url('assets/img/C.png')}}" alt="logo">
                 </a>
                 <!-- End Logo -->
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">

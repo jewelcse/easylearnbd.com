@@ -154,7 +154,7 @@ class StoryController extends Controller
     public function show($slug)
     {
         $story = Story::where('slug', $slug)->first();
-        return view('user.story',compact('story'));
+        return view('story',compact('story'));
     }
 
     /**

@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewAuthorStory extends Notification implements ShouldQueue
+class AuthorStoryApproved extends Notification implements ShouldQueue
 {
     use Queueable;
     public $story;
@@ -42,12 +42,13 @@ class NewAuthorStory extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->greeting('Hello Admin,')
-                    ->subject('New Story Approval Needed!')
-                    ->line('Submitted by '.$this->story->user->first_name." ".$this->story->user->last_name." need to approve.")
-                    ->line("Title: ".$this->story->title)
-                    ->action('Click story Approval URL', url('admin/story/review',$this->story->id))
-                    ->line('Thank you!');
+
+            ->subject('Congratulations! Your Story has been successfully approved.')
+            ->greeting('Hello '.$this->story->user->first_name." ".$this->story->user->first_name)
+            ->line('Your Post Approved. Now your post appear our Home page!')
+            ->line("Title: ".$this->story->title)
+            ->action('View', url('/story/',$this->story->slug))
+            ->line('Thank you!');
     }
 
     /**

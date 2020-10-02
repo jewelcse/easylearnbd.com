@@ -3,17 +3,27 @@
 
 @extends('layouts.app')
 
+
 @section('content')
 <!-- Begin Category -->
 	<div class="container">
-		<div class="mainheading">
-			<h1 class="sitetitle">Easylearnbd</h1>
-			<p class="lead text-center">
+        <div class="mainheading">
+{{--            <h1 class="sitetitle">Easylearnbd</h1>--}}
+            <p class="lead text-center">
                 @foreach($categories as $category)
-                <a href="{{route('category.story',$category->slug)}}" class="mr-2">[{{$category->name}}]</a>
+                    <a href="{{route('category.story',$category->slug)}}" class="mr-2">[{{$category->name}}]</a>
                 @endforeach
-			</p>
-		</div>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="example" action="{{route('story.search')}}">
+                    <input type="text" placeholder="Search.." name="query">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
 		<!-- End Category-->
 
         <!-- Begin Featured-->

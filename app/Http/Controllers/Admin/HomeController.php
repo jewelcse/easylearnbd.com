@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Notifications\AuthorStoryApproved;
 use App\Story;
+use App\Subscriber;
 use App\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Notification;
+
 class HomeController extends Controller
 {
 
@@ -94,6 +98,13 @@ class HomeController extends Controller
         $story->published_at = Carbon::now();
         //return $story;
         $story->save();
+        $story->user->notify(new AuthorStoryApproved($story));
+
+        $subscribers = Subscriber::all();
+        foreach ($subscribers as $subscriber){
+            Notification::route('gmail',$subscriber->email)
+            ->notify(new SubscribersNotify($story));
+        }
         return back()->with('status','Successfully Published');;
 //        return view('admin.admin_stories')
 //            ->with('status','Successfully Published');
