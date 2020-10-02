@@ -50,7 +50,6 @@ use \Illuminate\Support\Facades\Auth;
             <!-- begin post -->
             <div class="authorpostbox">
                 <div class="card">
-
                     <div class= "row">
 
                         <div class="col-md-8 author-post">

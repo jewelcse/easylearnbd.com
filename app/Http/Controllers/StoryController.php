@@ -7,6 +7,7 @@ use App\Notifications\NewAuthorStory;
 use App\Story;
 use App\StoryImage;
 use App\User;
+use Conner\Tagging\Model\Tag;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Http\Request;
@@ -58,7 +59,8 @@ class StoryController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        $tags = Tag::all();
+        return view('user.create',compact('tags'));
 
     }
 

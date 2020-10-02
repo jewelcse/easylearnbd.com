@@ -15,9 +15,12 @@
         cursor: pointer;
         color: red;
     }
+
+    input#tag{
+        width: 400px;
+    }
 </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -110,6 +113,7 @@
                                                     <input
                                                         type="text"
                                                         name="tag"
+                                                        id="tag"
                                                         value="{{ old('tag') }}"
                                                         class="form-control"
                                                         data-name="tags-input"
@@ -121,11 +125,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="tags p-3">
+                                        <p class="text-capitalize">#Recent Used Tags</p>
+
+                                            @foreach($tags as $tag)
+                                                <li class="d-inline-block p-2"
+                                                    style="display: block;
+                                                    color: #ffffff;
+                                                    background-color: #0f74a8"
+                                                >
+                                                    {{$tag->name." "}}<span class="badge badge-danger">{{$tag->count}}</span></li>
+                                            @endforeach
+
+                                    </div>
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
                                                 <button
-                                                    class="btn btn-primary btn-lg"
+                                                    style="float: right"
+                                                    class="btn btn-primary mb-4"
                                                     type="submit">
                                                    Submit Story
                                                 </button>
@@ -143,7 +161,38 @@
     </div>
 
 
+    <script type="text/javascript">
+        $('#tag').on('keyup',function(){
+            $value=$(this).val();
+            console.log($value);
+            {{--$.ajax({--}}
+            {{--    type : 'get',--}}
+            {{--    url : '{{URL::to('#')}}',--}}
+            {{--    data:{'search':$value},--}}
+            {{--    success:function(data){--}}
+            {{--        $('tbody').html(data);--}}
+            {{--    }--}}
+            {{--});--}}
+        });
+    </script>
+
+
+
+
+
+
+
+
     <script>
+
+// $(document).ready(function (){
+//     $(document).on('keyup','#tag',function (){
+//         var tag = $('#tag').val();
+//         console.log(tag);
+//     });
+//
+// });
+
 
 //        $.ajaxSetup({
 //            headers: {

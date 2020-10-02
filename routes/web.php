@@ -16,9 +16,12 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+
+
 Route::post('/subscribe','SubscriberController@storeEmail')->name('store.email');
 
 Route::get('/search','IndexController@search')->name('story.search');
+Route::get('/tag/{tags}','IndexController@searchByTags')->name('story.searchByTags');
 
 
 Route::get('/create','IndexController@createStoryRules')->name('story.create.rules');

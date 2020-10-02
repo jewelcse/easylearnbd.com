@@ -84,7 +84,7 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('story.create') }}">Create Story</a>
+                            <a class="nav-link" href="{{ route('story.create.rules') }}">Create Story</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest

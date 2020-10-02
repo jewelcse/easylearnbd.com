@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Story;
+use Conner\Tagging\Model\Tag;
+use Conner\Tagging\Model\Tagged;
 use Illuminate\Http\Request;
 use League\CommonMark\Inline\Element\Strong;
 
@@ -85,6 +87,27 @@ class IndexController extends Controller
         $stories = Story::where('title','LIKE',"%$query%")->where('is_published',true)->get();
 
         return view('search',compact('stories','query'));
+    }
+
+    public function searchByTags($tags){
+
+       //return $stories  = Story::with([Tag::where('id',$id)])->get();
+
+//        return $stories  =Story::with('Tag')->get();
+
+        $stories = Story::withAllTags($tags)->get(); // finally working
+
+
+//        $stories = Story::whereHas(['Tag'=> function($query) use($id){
+//            $query->where('id',$id);
+//        }])->get();
+//        dd($stories);
+
+
+
+        //$stories = Story::where('title','LIKE',"%$tags%")->where('body','LIKE',"%$tags%")->where('is_published',true)->get();
+
+        return view('tags',compact('stories','tags'));
     }
 
     public function createStoryRules(){
