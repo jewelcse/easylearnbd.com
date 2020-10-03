@@ -33,7 +33,7 @@
                     <div class="col-md-12">
                         <div class="card shadow mb-3">
                             <div class="card-header py-3">
-                                <p class="text-primary m-0 font-weight-bold">Create Story</p>
+                                <p class="text-primary m-0 font-weight-bold mb-1">Create Story</p>
                             </div>
                             <div class="card-body">
 
@@ -138,6 +138,12 @@
                                             @endforeach
 
                                     </div>
+
+{{--                                    <button class="btn btn-primary" type="button" disabled>--}}
+{{--                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>--}}
+{{--                                        Loading...--}}
+{{--                                    </button>--}}
+
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
@@ -150,6 +156,10 @@
                                             </div>
                                         </div>
                                     </div>
+
+
+
+
                                 </form>
                             </div>
                         </div>

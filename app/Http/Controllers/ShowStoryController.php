@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Story;
 use App\User;
+use Conner\Tagging\Model\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,11 +15,16 @@ class ShowStoryController extends Controller
 
         //return $slug;
         $story = Story::where('slug', $slug)->first();
-        //$story->increment('views_count')
+        //$story->increment('views_count') // doesnt work
         $story->views_count = $story->views_count+1;
         $story->save();
         //return $story->views_count;
-        return view('story',compact('story'));
+
+        $relStories = Story::where('category_id',$story->category_id)
+            ->where('id', '!=', $story->id)->limit(3)->get();;
+
+
+        return view('story',compact('story','relStories'));
     }
 
     public function authorStories($slug){
@@ -41,7 +47,10 @@ class ShowStoryController extends Controller
         //$author = User::findOrFail($aid);
 
         //$data = ['story','author'];
-        return view('stories.author_single_story',compact('story',$story));
+        $relStories = Story::where('category_id',$story->category_id)
+            ->where('id', '!=', $story->id)->limit(3)->get();
+
+        return view('stories.author_single_story',compact('story','relStories'));
 //        return view('stories.author_single_story')
 //            ->with('story',$story)
 //            ->with('author',$author);

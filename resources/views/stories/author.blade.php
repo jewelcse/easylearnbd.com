@@ -16,7 +16,11 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="mainheading">
                     <div class="row post-top-meta authorpage">
-                        <div class="col-md-10 col-xs-12">
+                        <div class="col-md-2 col-xs-12">
+                            <img class="" style="height: 80px;width: 80px; border-radius: 50%" src="{{ URL::to('/') }}/images/{{$author->avater}}"  alt="{{$author->first_name ." ".$author->last_name}}">
+                        </div>
+
+                        <div class="col-md-10 col-xs-12 mb-1 float-right">
 
                             <h1>{{$author->first_name}} {{$author->last_name}}</h1>
 
@@ -24,9 +28,6 @@
 
                             <a target="_blank" href="#" class="btn follow">Follow</a>
 
-                        </div>
-                        <div class="col-md-2 col-xs-12">
-                            <img class="" style="height: 130px;width: 130px; position: absolute; border-radius: 50%" src="{{ URL::to('/') }}/images/{{$author->avater}}"  alt="{{$author->first_name ." ".$author->last_name}}">
                         </div>
                     </div>
                 </div>
@@ -44,7 +45,7 @@
             @foreach($stories as $story)
                 <!-- begin post -->
                     <div class="authorpostbox">
-                        <div class="card">
+                        <div class="card pl-3">
 
                             <div class= "row">
                                 <div class="col-md-8 author-post">
@@ -68,7 +69,8 @@
                                 </div>
                                 <div class="col-md-4">
                                     <a href="{{route('author.single.story',[$author->slug,$story->slug])}}">
-                                        <img class="img-fluid img-thumb img-for-post" src="{{URL::to('/') }}/images/{{$story->img_name}}" alt="">
+                                        <img class="img-fluid img-thumb img-for-post" style="background-size: cover;
+height: 180px;" src="{{URL::to('/') }}/images/{{$story->img_name}}" alt="">
                                     </a>
                                 </div>
                             </div>

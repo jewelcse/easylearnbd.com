@@ -12,7 +12,7 @@ use \Illuminate\Support\Facades\Auth;
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-md-offset-2">
-            <div class="mainheading">
+            <div class="mainheading d-none d-sm-none d-md-block">
                 <div class="row post-top-meta authorpage">
                     <div class="col-md-10 col-xs-12">
 
@@ -49,7 +49,7 @@ use \Illuminate\Support\Facades\Auth;
             @foreach($stories as $story)
             <!-- begin post -->
             <div class="authorpostbox">
-                <div class="card">
+                <div class="card pl-2">
                     <div class= "row">
 
                         <div class="col-md-8 author-post">

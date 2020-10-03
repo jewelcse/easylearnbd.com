@@ -61,3 +61,12 @@ form.example::after {
     clear: both;
     display: table;
 }
+
+.listrelated .card {
+    background-color: #dcdcdc;
+}
+
+.autor_stories .card {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+}
