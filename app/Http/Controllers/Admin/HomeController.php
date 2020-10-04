@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Notifications\AuthorStoryApproved;
+use App\Notifications\SubscribersNotify;
 use App\Story;
 use App\Subscriber;
 use App\User;
@@ -91,7 +92,7 @@ class HomeController extends Controller
     public function storyPublishedAction(Request $request){
 
         //return $request->all();
-
+        $subscribers = Subscriber::all();
         $story = Story::findOrFail($request->get('story_id'));
         $story->category_id = $request->get('category_id');
         $story->is_published = 1;
@@ -100,9 +101,9 @@ class HomeController extends Controller
         $story->save();
         $story->user->notify(new AuthorStoryApproved($story));
 
-        $subscribers = Subscriber::all();
+
         foreach ($subscribers as $subscriber){
-            Notification::route('gmail',$subscriber->email)
+            Notification::route('mail',$subscriber->email)
             ->notify(new SubscribersNotify($story));
         }
         return back()->with('status','Successfully Published');;
