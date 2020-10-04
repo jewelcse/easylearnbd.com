@@ -44,7 +44,7 @@ class SubscribersNotify extends Notification implements ShouldQueue
         return (new MailMessage)
 
             ->subject('A New post has been Published!')
-            ->greeting('Hello '.$this->story->user->first_name." ".$this->story->user->first_name)
+            ->greeting('Hello Subscriber,')
             ->line('A New post has been Publish. It may be very helpful to you.')
             ->line("Title: ".$this->story->title)
             ->action('Read', url('/story/{slug}',$this->story->slug))
