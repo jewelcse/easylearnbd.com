@@ -109,8 +109,10 @@
                 </div>
                 <!-- end post -->
                 @endforeach
-            </div>
 
+
+            </div>
+            {{ $stories->links() }}
         </section>
         <!-- End List Posts-->
 

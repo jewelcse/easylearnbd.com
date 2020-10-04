@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Str;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Laravel\Socialite\Facades\Socialite;
 class LoginController extends Controller
 {
     /*
@@ -42,4 +46,40 @@ class LoginController extends Controller
      * @return void
      */
 
+    public function facebook(){
+
+        return Socialite::driver('facebook')->redirect();
+
+    }
+
+    public function facebookRedirect(){
+
+    }
+
+    public function github(){
+
+        return Socialite::driver('github')->redirect();
+
+    }
+
+    public function githubRedirect(){
+
+         $user = Socialite::driver('github')->user();
+
+         dd($user->getEmail());
+
+//         $user = User::firstOrCreate([
+//
+//             'email' =>$user->getEmail() ,
+//         ],[
+//             'first_name' =>$user->getName(),
+//             'last_name' =>$user->getNickname(),
+//             'slug'=>time()."@".str_slug($user->getName(), "-")."-".str_slug($user->getNickname(),"-"),
+//             'password' => Hash::make(Str::random(20)),
+//         ]);
+//
+//         Auth::login($user,true);
+//
+//         return redirect('/');
+    }
 }

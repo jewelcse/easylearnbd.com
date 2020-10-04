@@ -25,7 +25,7 @@ class IndexController extends Controller
         SEOTools::setDescription('This is my page description');
 
         $feaStories  = Story::inRandomOrder()->limit(4)->get();
-        $stories = Story::where('is_published',1)->get();
+        $stories = Story::where('is_published',1)->latest()->paginate(10);
         $categories = Category::all();
 
 //        $featureStories = array();
@@ -58,7 +58,8 @@ class IndexController extends Controller
         //return view('index',compact('stories'));
         return view('index')->with('stories',$stories)
             ->with('categories',$categories)
-            ->with('featureStories',$feaStories);
+            ->with('featureStories',$feaStories)
+            ->with('i', (request()->input('page', 1) - 1) * 5);;
     }
 
 

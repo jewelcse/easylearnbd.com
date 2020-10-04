@@ -10,6 +10,13 @@
     border-radius: 0px !important;
     height: auto;
 }
+#textPrevent,
+#emailSetting{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
 /*

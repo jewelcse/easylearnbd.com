@@ -12,6 +12,12 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
+Route::get('/login/facebook','Auth\LoginController@facebook')->name('facebook.login');
+Route::get('/login/facebook/redirect','Auth\LoginController@facebookRedirect');
+
+Route::get('/login/github','Auth\LoginController@github')->name('github.login');
+Route::get('/login/github/redirect','Auth\LoginController@githubRedirect');
+
 Route::get('/register', function () {
     return view('auth.register');
 });

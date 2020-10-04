@@ -8,22 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {!! SEO::generate() !!}
-    <style>
 
-        #textPrevent,
-        #emailSetting{
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-
-
-
-
-
-    </style>
 
     <link href="{{url('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Fonts -->
@@ -41,10 +26,6 @@
     <link href="{{url('css/prism.css')}}" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-{{--    <link rel="stylesheet" href="{{url('asset/bootstrap/css/bootstrap.min.css')}}">--}}
-{{--    <link rel="stylesheet" href="{{url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')}}">--}}
-{{--    <link rel="stylesheet" href="{{url('asset/fonts/fontawesome-all.min.css')}}">--}}
 
 
 </head>
@@ -64,22 +45,6 @@
                 <!-- End Logo -->
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <!-- Begin Search -->
-{{--                            <form class="form-inline my-2 my-lg-0">--}}
-{{--                                <input class="form-control mr-sm-2" type="text" placeholder="Search" style="width: 400px;margin-left: 30px">--}}
-{{--                                <span class="search-icon">--}}
-{{--						        <svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">--}}
-{{--							        <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path>--}}
-{{--						        </svg>--}}
-{{--					        </span>--}}
-{{--                            </form>--}}
-                            <!-- End Search -->
-                        </li>
-                    </ul>
-
-
                     <!-- Begin Menu -->
                     <ul class="navbar-nav ml-auto">
 
@@ -88,14 +53,7 @@
                         </li>
                         <!-- Authentication Links -->
                         @guest
-{{--                            <li class="nav-item">--}}
-{{--                                <a class="nav-link btn btn-outline-success" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
-{{--                            </li>--}}
-{{--                            @if (Route::has('register'))--}}
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link btn btn-outline-success" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-{{--                                </li>--}}
-{{--                            @endif--}}
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" style="position: relative;padding-left:50px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -164,23 +122,23 @@
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item style="color: black"">
-                        <h3>About</h3>
+                        <h3>Quick Link</h3>
                         <ul>
                             <li>
-                                <a href="#">Company</a>
+                                <a href="#">About</a>
                             </li>
                             <li>
-                                <a href="#">Team</a>
+                                <a href="#">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="#">Careers</a>
+                                <a href="#">Contact</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text" style="color: black">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam
-                            quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        <h3>Codesnipeet</h3>
+                        <p>A online platform, where you can learn programming, web-development with simple examples.
+                        Most of the tutorials have with example projects and with source code.Learn with me!Thanks</p>
                     </div>
                     <div class="col item social" style="color: black">
                         <a href="#">
@@ -198,25 +156,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-{{--            <div class="row">--}}
-{{--                <p class="col-md-3">--}}
-{{--                    Copyright &copy; 2020 Easylearnbd.com--}}
-{{--                </p>--}}
-
-{{--                <p class="col-md-2"><a href="">About us</a></p>--}}
-{{--                <p class="col-md-2"><a href="">Contact us</a></p>--}}
-{{--                <p class="col-md-2"><a href="">Privacy Policy</a></p>--}}
-{{--                <p class="col-md-2"><a href="">Terms and Conditions</a></p>--}}
-{{--                <p class="col-md-2">--}}
-{{--                    Inspired by--}}
-{{--                    <a target="_blank" href="https://www.medium.com">Medium.com</a>--}}
-{{--                </p>--}}
-{{--            </div>--}}
-
-
             <div class="clearfix"></div>
         </div>
         <!-- End Footer-->
@@ -225,7 +164,6 @@
         <script src="{{url('assets/js/jquery.min.js')}}"></script>
         <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
         <script src="{{url('assets/js/ie10-viewport-bug-workaround.js')}}"></script>
-
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
@@ -242,9 +180,6 @@
 
         <script src="{{url('assets/tags/bootstrap-tagsinput.js')}}"> </script>
         <script SRC="{{url('js/prism.js')}}"></script>
-
-
-
 
 </body>
 </html>

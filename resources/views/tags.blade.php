@@ -19,7 +19,7 @@
         </div>
 
         <div class="section-title">
-            <h2><span>{{$stories->count()}} stories are available for- {{$tags }}</span></h2>
+            <h2 class="text-white mb-4" style="background-color: #0f74a8;padding: 15px">{{$stories->count()}} stories are available for- {{$tags }}</h2>
         </div>
 
         <div class="container">

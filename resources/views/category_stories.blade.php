@@ -26,7 +26,7 @@
         <!-- Begin List Posts-->
         <section class="recent-posts">
             <div class="section-title">
-                <h2><span>{{$category_name}}</span></h2>
+                <h2 class="text-white mb-4" style="background-color: #0f74a8;padding: 15px">{{$category_name}}</h2>
             </div>
             <div class="card-columns listrecent">
             @foreach($stories as $story)
