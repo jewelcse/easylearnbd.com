@@ -96,6 +96,8 @@ class HomeController extends Controller
         $story = Story::findOrFail($request->get('story_id'));
         $story->category_id = $request->get('category_id');
         $story->is_published = 1;
+        $story->seo_description = $request->get('seo_description');
+        $story->seo_keywords = $request->get('seo_keywords');
         $story->published_at = Carbon::now();
         //return $story;
         $story->save();

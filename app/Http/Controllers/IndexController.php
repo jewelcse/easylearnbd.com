@@ -8,18 +8,10 @@ use Conner\Tagging\Model\Tag;
 use Conner\Tagging\Model\Tagged;
 use Illuminate\Http\Request;
 use League\CommonMark\Inline\Element\Strong;
-
+use Artesaos\SEOTools\Facades\SEOTools;
 class IndexController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //$this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -28,6 +20,11 @@ class IndexController extends Controller
      */
     public function index()
     {
+
+        SEOTools::setTitle('Home');
+        SEOTools::setDescription('This is my page description');
+
+        $feaStories  = Story::inRandomOrder()->limit(4)->get();
         $stories = Story::where('is_published',1)->get();
         $categories = Category::all();
 
@@ -59,20 +56,19 @@ class IndexController extends Controller
 
 
         //return view('index',compact('stories'));
-        return view('index')->with('stories',$stories)->with('categories',$categories);
+        return view('index')->with('stories',$stories)
+            ->with('categories',$categories)
+            ->with('featureStories',$feaStories);
     }
 
 
     public function storiesByCategory($slug){
 
+        SEOTools::setTitle($slug);
         $categories = Category::all();
         $category = Category::where('slug',$slug)->first();
-
-        //conditions = ['is_published'=>1,'slug'=>$slug];
         $stories  = Story::where('is_published',1)
             ->where('category_id',$category->id)->get();
-        //$stories  =Story::where($conditions)->get();
-        //return $stories;
         return view('category_stories')
             ->with('stories',$stories)
             ->with('categories',$categories)
@@ -82,31 +78,16 @@ class IndexController extends Controller
 
     public function search(Request $request){
 
+        SEOTools::setTitle($request->get('query'));
         $query = $request->get('query');
-
         $stories = Story::where('title','LIKE',"%$query%")->where('is_published',true)->get();
-
         return view('search',compact('stories','query'));
     }
 
     public function searchByTags($tags){
 
-       //return $stories  = Story::with([Tag::where('id',$id)])->get();
-
-//        return $stories  =Story::with('Tag')->get();
-
-        $stories = Story::withAllTags($tags)->get(); // finally working
-
-
-//        $stories = Story::whereHas(['Tag'=> function($query) use($id){
-//            $query->where('id',$id);
-//        }])->get();
-//        dd($stories);
-
-
-
-        //$stories = Story::where('title','LIKE',"%$tags%")->where('body','LIKE',"%$tags%")->where('is_published',true)->get();
-
+        SEOTools::setTitle($tags);
+        $stories = Story::withAllTags($tags)->get();
         return view('tags',compact('stories','tags'));
     }
 

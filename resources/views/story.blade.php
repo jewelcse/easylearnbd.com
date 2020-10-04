@@ -138,6 +138,7 @@
 <!-- Begin Related -->
 <div class="graybg bg">
     <div class="container">
+
         <div class="row listrecent listrelated">
             <!-- begin post -->
             @foreach($relStories as $relStory)

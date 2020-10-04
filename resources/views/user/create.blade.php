@@ -16,9 +16,6 @@
         color: red;
     }
 
-    input#tag{
-        width: 400px;
-    }
 </style>
 
 

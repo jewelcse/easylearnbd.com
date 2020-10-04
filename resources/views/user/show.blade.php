@@ -15,8 +15,6 @@
                     </div>
                 @endif
 
-<?php $i=0 ?>
-
                     @foreach($stories as $story)
                         <ul class="list-inline" style="font-size: 20px;">
                             <li class="list-inline-item">{{++$i}} | <a href="{{route('story.show',$story->slug)}}">{{$story->title}}</a> </li>
@@ -37,7 +35,7 @@
 
                         </ul>
                     @endforeach
-
+    {{ $stories->links() }}
     </div>
 </div>
 @endsection
