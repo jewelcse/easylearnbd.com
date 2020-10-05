@@ -27,7 +27,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
 </head>
 <body>
 
@@ -116,12 +115,12 @@
                                 @endif
                             @else
                                 <h3 class="text-center">Make Awesome</h3>
-<span>Thanks! for joining with us, let's publish your story </span>
+                                <span>Thanks! for joining with us, let's publish your story </span>
                             @endguest
 
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-md-3 item style="color: black"">
+                    <div class="col-sm-6 col-md-3" style="color: black">
                         <h3>Quick Link</h3>
                         <ul>
                             <li>
@@ -142,16 +141,16 @@
                     </div>
                     <div class="col item social" style="color: black">
                         <a href="#">
-                            <i class="icon ion-social-facebook"></i>
+                            <i class="icon ion-social-facebook"></i>facebook
                         </a>
                         <a href="#">
-                            <i class="icon ion-social-twitter"></i>
+                            <i class="icon ion-social-twitter"></i>twitter
                         </a>
                         <a href="#">
-                            <i class="icon ion-social-snapchat"></i>
+                            <i class="icon ion-social-snapchat"></i> snapchat
                         </a>
                         <a href="#">
-                            <i class="icon ion-social-instagram"></i>
+                            <i class="icon ion-social-instagram"></i> instagram
                         </a>
                     </div>
                 </div>
@@ -159,6 +158,7 @@
             <div class="clearfix"></div>
         </div>
         <!-- End Footer-->
+
 
 
         <script src="{{url('assets/js/jquery.min.js')}}"></script>
@@ -180,6 +180,9 @@
 
         <script src="{{url('assets/tags/bootstrap-tagsinput.js')}}"> </script>
         <script SRC="{{url('js/prism.js')}}"></script>
+
+
+
 
 </body>
 </html>

@@ -36,6 +36,8 @@ class CategoryController extends Controller
         $category = new Category();
 
         $category->name = $request->get('name');
+        $category->seo_description = $request->get('seo_description');
+        $category->seo_keywords = $request->get('seo_keywords');
         $category->slug = SlugService::createSlug(Category::class,'slug',$request->name);
         $category->save();
 

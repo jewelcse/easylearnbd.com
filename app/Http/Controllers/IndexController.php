@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Story;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Conner\Tagging\Model\Tag;
 use Conner\Tagging\Model\Tagged;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use League\CommonMark\Inline\Element\Strong;
 use Artesaos\SEOTools\Facades\SEOTools;
 class IndexController extends Controller
@@ -65,11 +68,26 @@ class IndexController extends Controller
 
     public function storiesByCategory($slug){
 
-        SEOTools::setTitle($slug);
+
         $categories = Category::all();
         $category = Category::where('slug',$slug)->first();
         $stories  = Story::where('is_published',1)
             ->where('category_id',$category->id)->get();
+
+        SEOMeta::setTitle($slug);
+        SEOMeta::setDescription($category->seo_description);
+        SEOMeta::addMeta('category:published_time',Carbon::createFromFormat('Y-m-d H:i:s', $category->created_at)->format('d/m/Y'), 'property');
+
+        SEOMeta::addKeyword($category->seo_keywords);
+
+        OpenGraph::setDescription($category->seo_description);
+        OpenGraph::setTitle($category->name);
+        OpenGraph::setUrl(url()->full());
+        OpenGraph::addProperty('type', 'category');
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
+
+
         return view('category_stories')
             ->with('stories',$stories)
             ->with('categories',$categories)

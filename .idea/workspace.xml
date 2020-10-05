@@ -21,10 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Footer-Dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Footer-Dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_add_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_add_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rules.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rules.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +255,8 @@
       <workItem from="1601784804673" duration="822000" />
       <workItem from="1601748618264" duration="4568000" />
       <workItem from="1601816521119" duration="19709000" />
-      <workItem from="1601885978101" duration="3185000" />
+      <workItem from="1601885978101" duration="8330000" />
+      <workItem from="1601903568158" duration="1268000" />
     </task>
     <servers />
   </component>
@@ -279,10 +284,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1599544580892" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601224054697">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601894306007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601224054697" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601894306007" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1601105275596">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

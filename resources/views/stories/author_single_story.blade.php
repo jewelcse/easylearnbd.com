@@ -114,7 +114,7 @@
                     <ul class="tags">
                         @foreach($story->tags as $tag)
                             <li>
-                                <a href="#">{{$tag->name}}</a>
+                                <a href="{{route('story.searchByTags',$tag->name)}}">{{$tag->name}}</a>
                             </li>
                         @endforeach
                     </ul>
