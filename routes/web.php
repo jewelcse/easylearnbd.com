@@ -12,15 +12,31 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::get('/login/facebook','Auth\LoginController@facebook')->name('facebook.login');
-Route::get('/login/facebook/redirect','Auth\LoginController@facebookRedirect');
-
-Route::get('/login/github','Auth\LoginController@github')->name('github.login');
-Route::get('/login/github/redirect','Auth\LoginController@githubRedirect');
-
 Route::get('/register', function () {
     return view('auth.register');
 });
+
+/*
+ * Facebook auth
+ */
+
+Route::get('/login/facebook','Auth\LoginController@facebook')->name('facebook.login');
+Route::get('/login/facebook/redirect','Auth\LoginController@facebookRedirect');
+
+/*
+ * GitHub auth
+ */
+Route::get('/login/github','Auth\LoginController@github')->name('github.login');
+Route::get('/login/github/redirect','Auth\LoginController@githubRedirect');
+
+
+/*
+ * Google auth
+ */
+Route::get('/login/google','Auth\LoginController@google')->name('google.login');
+Route::get('/login/google/redirect','Auth\LoginController@googleRedirect');
+
+
 
 
 

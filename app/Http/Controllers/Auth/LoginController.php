@@ -66,20 +66,45 @@ class LoginController extends Controller
 
          $user = Socialite::driver('github')->user();
 
-         dd($user->getEmail());
+         //dd($user->getEmail());
 
-//         $user = User::firstOrCreate([
-//
-//             'email' =>$user->getEmail() ,
-//         ],[
-//             'first_name' =>$user->getName(),
-//             'last_name' =>$user->getNickname(),
-//             'slug'=>time()."@".str_slug($user->getName(), "-")."-".str_slug($user->getNickname(),"-"),
-//             'password' => Hash::make(Str::random(20)),
-//         ]);
-//
-//         Auth::login($user,true);
-//
-//         return redirect('/');
+         $user = User::firstOrCreate([
+
+             'email' =>$user->getEmail() ,
+         ],[
+             'first_name' =>$user->getNickname(),
+             'last_name' =>$user->getNickname(),
+             'slug'=>time()."@".str_slug($user->getName(), "-")."-".str_slug($user->getNickname(),"-"),
+             'password' => Hash::make(Str::random(20)),
+         ]);
+
+         Auth::login($user,true);
+
+         return redirect('/');
     }
+
+    public function google(){
+        return Socialite::driver('google')->redirect();
+    }
+    public function googleRedirect(){
+
+        $user = Socialite::driver('google')->user();
+
+        //dd($user->getEmail());
+
+        $user = User::firstOrCreate([
+
+            'email' =>$user->getEmail() ,
+        ],[
+            'first_name' =>$user->getName(),
+            'last_name' =>$user->getName(),
+            'slug'=>time()."@".str_slug($user->getName(), "-")."-".str_slug($user->getName(),"-"),
+            'password' => Hash::make(Str::random(20)),
+        ]);
+
+        Auth::login($user,true);
+
+        return redirect('/');
+    }
+
 }

@@ -89,7 +89,7 @@
                                         class="btn btn-primary btn-block text-white btn-user"
                                         type="submit"> {{ __('Login') }}</button>
 
-                                    <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a>
+                                    <hr><a href="{{route('google.login')}}" class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a>
                                     <a href="{{route('facebook.login')}}" class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Login with Facebook</a>
                                     <a href="{{route('github.login')}}" class="btn btn-primary btn-block text-white btn-github btn-user" role="button"><i class="fab fa-github-f"></i>&nbsp; Login with Github</a>
                                     <hr>
