@@ -91,9 +91,9 @@
         </nav>
         <!-- End Nav -->
 
-        <div class="">
-            @yield('content')
-        </div>
+
+        @yield('content')
+
 
         <!-- Begin Footer-->
         <div class="footer bg">
@@ -180,9 +180,6 @@
 
         <script src="{{url('assets/tags/bootstrap-tagsinput.js')}}"> </script>
         <script SRC="{{url('js/prism.js')}}"></script>
-
-
-
 
 </body>
 </html>

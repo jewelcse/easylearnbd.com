@@ -7,14 +7,15 @@
 @section('content')
 <!-- Begin Category -->
 	<div class="container">
+
         <div class="mainheading">
-{{--            <h1 class="sitetitle">Easylearnbd</h1>--}}
             <p class="lead text-center">
                 @foreach($categories as $category)
                     <a href="{{route('category.story',$category->slug)}}" class="mr-2">[{{$category->name}}]</a>
                 @endforeach
             </p>
         </div>
+
         <div class="row">
             <div class="col-md-12">
                 <form class="example" action="{{route('story.search')}}">
@@ -115,23 +116,10 @@
             {{ $stories->links() }}
         </section>
         <!-- End List Posts-->
-
+    </div>
 @endsection
 
-            <script>
-                // $(document).ready(function() {
-                //     $('#loading').hide();
-                // });
-                $(document).ready(function() {
-                    $('.loader').show();
-                    $('.story-img').on('load', function () {
-                        // hide the loading image
-                        $('.loader').hide();
-                    });
 
-                });
-
-            </script>
 
 
 
