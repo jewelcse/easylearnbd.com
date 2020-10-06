@@ -54,6 +54,23 @@ class LoginController extends Controller
 
     public function facebookRedirect(){
 
+        $user = Socialite::driver('facebook')->user();
+
+        //dd($user->getEmail());
+
+        $user = User::firstOrCreate([
+
+            'email' =>$user->getEmail() ,
+        ],[
+            'first_name' =>$user->getNickname(),
+            'last_name' =>$user->getNickname(),
+            'slug'=>time()."@".str_slug($user->getName(), "-")."-".str_slug($user->getNickname(),"-"),
+            'password' => Hash::make(Str::random(20)),
+        ]);
+
+        Auth::login($user,true);
+
+        return redirect('/');
     }
 
     public function github(){
