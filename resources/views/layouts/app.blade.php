@@ -135,7 +135,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6 item text" style="color: black">
-                        <h3>Codesnipeet</h3>
+                        <h3>Easylearnbd</h3>
                         <p>A online platform, where you can learn programming, web-development with simple examples.
                         Most of the tutorials have with example projects and with source code.Learn with me!Thanks</p>
                     </div>

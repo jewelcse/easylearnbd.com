@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/easylearnbd.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easylearnbd.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +162,17 @@
       <path value="$PROJECT_DIR$/vendor/artesaos/seotools" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/collect" />
+      <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/spatie/robots-txt" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/vendor/league/glide" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/crawler" />
+      <path value="$PROJECT_DIR$/vendor/spatie/browsershot" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-sitemap" />
+      <path value="$PROJECT_DIR$/vendor/nicmart/tree" />
     </include_path>
   </component>
   <component name="ProjectId" id="1h8375mZuwc9qsPa0PkOWoyydp0" />
@@ -174,19 +190,19 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\assets\img" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\img" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin\Auth\Auth" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\public\tinymce\plugin\tinymce" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\public\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\assets\img" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\img" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset" />
     </key>
   </component>
   <component name="RunManager">
@@ -251,7 +267,7 @@
       <workItem from="1601885978101" duration="8330000" />
       <workItem from="1601903568158" duration="2313000" />
       <workItem from="1601964743425" duration="5490000" />
-      <workItem from="1601989138088" duration="4431000" />
+      <workItem from="1601989138088" duration="11656000" />
     </task>
     <servers />
   </component>
@@ -311,10 +327,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1601740971350" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1601019210938">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1601997926104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1601019210938" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1601997926104" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1601495861195">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
