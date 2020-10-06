@@ -9,14 +9,7 @@
     <div class="container">
         <!-- Begin List Posts-->
 
-        <div class="row">
-            <div class="col-md-12">
-                <form class="example" action="{{route('story.search')}}">
-                    <input type="text" placeholder="Search.." name="query">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
+
 
         <div class="section-title">
             <h2 class="text-white mb-4" style="background-color: #0f74a8;padding: 15px">{{$stories->count()}} stories are available for- {{$tags }}</h2>
