@@ -11,14 +11,14 @@
             </p>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <form class="example" action="{{route('story.search')}}">
-                    <input type="text" placeholder="Search.." name="query">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                <form class="example" action="{{route('story.search')}}">--}}
+{{--                    <input type="text" placeholder="Search.." name="query">--}}
+{{--                    <button type="submit"><i class="fa fa-search"></i></button>--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
 
         <!-- Begin Featured -->

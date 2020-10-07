@@ -20,8 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Story.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Story.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_stories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_stories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_story_review.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_story_review.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +183,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1h8375mZuwc9qsPa0PkOWoyydp0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -186,11 +200,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin\story" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin\Auth\Auth" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\tinymce\plugin\tinymce" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
@@ -262,7 +276,9 @@
       <workItem from="1601885978101" duration="8330000" />
       <workItem from="1601903568158" duration="2313000" />
       <workItem from="1601964743425" duration="5490000" />
-      <workItem from="1601989138088" duration="12778000" />
+      <workItem from="1601989138088" duration="15999000" />
+      <workItem from="1602009031500" duration="3597000" />
+      <workItem from="1602074337665" duration="11720000" />
     </task>
     <servers />
   </component>
@@ -290,10 +306,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1599544580892" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601894306007">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602010172566">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1601894306007" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602010172566" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1601105275596">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -318,10 +334,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="436" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1601476064623" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1601740971350">
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1602006320219">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1601740971350" />
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602006320219" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1601997926104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

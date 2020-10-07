@@ -36,7 +36,7 @@
                                             name="body"
                                             id="story-body">
                                             {{$story->body}}
-                                                </textarea>
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>

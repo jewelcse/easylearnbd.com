@@ -53,8 +53,10 @@
                                 <td id="current_status">
                                     @if($story->is_published == 1)
                                         <p id="currentStatus">Published</p>
+                                    @elseif($story->is_published == -1)
+                                       <p id="currentStatus">Need attention</p>
                                     @else
-                                       <p id="currentStatus">Pending</p>
+                                        <p id="currentStatus">Not Published</p>
                                     @endif
 
                                 </td>

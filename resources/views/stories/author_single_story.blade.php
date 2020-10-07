@@ -189,7 +189,7 @@
                 <div class="modal-body text-center">
                     <form action="{{route('store.email')}}" method="POST" class="">
                         @csrf
-                        <input type="email" class="form-control mb-2" name="email" placeholder="Enter your Email">
+                        <input type="email" class="form-control mb-2" name="email" placeholder="Enter your Email" required>
                         <button class="btn subscribe">subscribe</button>
                     </form>
                 </div>
@@ -203,7 +203,7 @@
         <div class="container text-center">
             <img src="{{url('assets/img/C.png')}}"  alt="logo"> &nbsp; Never miss a
             <b>story</b> from us, get daily updates in your inbox.
-            <button data-toggle="modal" class="btn subscribe" data-target="#exampleModalCenter">
+            <button data-toggle="modal" class="btn subscribe" data-target="#exampleModalCenter" >
                 Get Updates
             </button>
         </div>

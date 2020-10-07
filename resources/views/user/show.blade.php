@@ -14,28 +14,32 @@
                         {{ session('status') }}
                     </div>
                 @endif
+<table class="table table-hover">
+    <tbody>
+    @foreach($stories as $story)
+    <tr>
+        <td>{{++$i}} </td>
+        <td><a href="{{route('story.show',$story->slug)}}">{{$story->title}}</a></td>
+        <td>@if($story->is_published == 1)
+                <p id="currentStatus">Published</p>
+            @elseif($story->is_published == -1)
+                <p id="currentStatus">Need attention</p>
+            @elseif($story->is_published == -2)
+                <p id="currentStatus">Reviewing</p>
+            @else
+                <p id="currentStatus">Pending</p>
 
-                    @foreach($stories as $story)
-                        <ul class="list-inline" style="font-size: 20px;">
-                            <li class="list-inline-item">{{++$i}} | <a href="{{route('story.show',$story->slug)}}">{{$story->title}}</a> </li>
-                                @if($story->is_published == 0)
-                                    <li class="text-danger list-inline-item">pending.</li>
-                                @else
-                                    <li class="text-success list-inline-item">aproved</li>
-                                @endif
-                            <li class="list-inline-item"><a href="{{route('story.edit',$story->slug)}}">Update</a></li>
-                            <li class="list-inline-item">
-                            <form action="{{route('story.destroy',$story->id)}}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                            </li>
-
-
-                        </ul>
-                    @endforeach
+            @endif </td>
+        <td><a href="{{route('story.edit',$story->slug)}}">Update</a></td>
+        <td><form action="{{route('story.destroy',$story->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form></td>
+    </tr>
+    @endforeach
     {{ $stories->links() }}
-    </div>
+    </tbody>
+</table>
 </div>
 @endsection

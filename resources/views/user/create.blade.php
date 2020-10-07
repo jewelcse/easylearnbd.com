@@ -168,26 +168,6 @@
     </div>
 
 
-    <script type="text/javascript">
-        $('#tag').on('keyup',function(){
-            $value=$(this).val();
-            console.log($value);
-            {{--$.ajax({--}}
-            {{--    type : 'get',--}}
-            {{--    url : '{{URL::to('#')}}',--}}
-            {{--    data:{'search':$value},--}}
-            {{--    success:function(data){--}}
-            {{--        $('tbody').html(data);--}}
-            {{--    }--}}
-            {{--});--}}
-        });
-    </script>
-
-
-
-
-
-
 
 
     <script>

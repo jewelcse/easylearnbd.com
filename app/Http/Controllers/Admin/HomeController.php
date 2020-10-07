@@ -95,7 +95,7 @@ class HomeController extends Controller
         $subscribers = Subscriber::all();
         $story = Story::findOrFail($request->get('story_id'));
         $story->category_id = $request->get('category_id');
-        $story->is_published = 1;
+        $story->is_published = $request->get('is_published');
         $story->seo_description = $request->get('seo_description');
         $story->seo_keywords = $request->get('seo_keywords');
         $story->published_at = Carbon::now();
@@ -108,13 +108,17 @@ class HomeController extends Controller
             Notification::route('mail',$subscriber->email)
             ->notify(new SubscribersNotify($story));
         }
-        return back()->with('status','Successfully Published');;
+        return back()->with('status','Update Status');;
 //        return view('admin.admin_stories')
 //            ->with('status','Successfully Published');
     }
 
     public function reviewStory($id){
         $story = Story::findOrFail($id);
+        if ($story->is_published == 0){
+            $story->is_published = -2;
+            $story->save();
+        }
         $categories = Category::all();
         return view('admin.admin_story_review')
             ->with('story',$story)

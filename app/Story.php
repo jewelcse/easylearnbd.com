@@ -18,7 +18,7 @@ class Story extends Model
         'slug',
         'img_name',
         'body',
-        'views_count'
+        'views_count',
     ];
 
     public function category(){

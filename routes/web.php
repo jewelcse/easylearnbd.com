@@ -138,6 +138,8 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
     });
 
+
+
     /*
      * Categories all route
      */

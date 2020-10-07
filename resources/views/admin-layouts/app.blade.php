@@ -17,6 +17,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <link href="{{url('assets/tags/bootstrap-tagsinput.css')}}" rel="stylesheet">
+
+
+    <link href="{{url('css/prism.css')}}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -174,6 +179,17 @@
 <script src="{{url('admin-assets/js/bs-init.js')}}"></script>
 <script src="{{url('https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js')}}"></script>
 <script src="{{url('admin-assets/js/theme.js')}}"></script>
+
+
+{{--        Tinymcse editor script--}}
+
+<script src="{{url('tinymce/plugin/tinymce/tinymce.min.js')}}"></script>
+<script src="{{url('tinymce/plugin/tinymce/init-tinymce.js')}}"></script>
+
+
+
+<script src="{{url('assets/tags/bootstrap-tagsinput.js')}}"> </script>
+<script SRC="{{url('js/prism.js')}}"></script>
 
 </body>
 </html>
