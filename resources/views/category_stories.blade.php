@@ -15,7 +15,6 @@
         </div>
         <!-- End Category-->
 
-
         <!-- Begin List Posts-->
         <section class="recent-posts">
             <div class="section-title">
@@ -52,6 +51,10 @@
 
         </section>
         <!-- End List Posts-->
+
+        <div class="addvertise mb-2" id="advertise-7">
+
+        </div>
     </div>
 
 

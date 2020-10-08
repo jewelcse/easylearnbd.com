@@ -38,8 +38,9 @@
 @section('content')
    <div class="container">
        <div class="row">
-           <div class="com-md-12">
-               <h3 class="outline" style="background-color: #0f74a8;padding: 15px">Don’t Accept Stories Unless You Follow These 7 Rules</h3>
+           <h3 class="outline" style="background-color: #0f74a8;padding: 15px">Don’t Accept Stories Unless You Follow These 7 Rules</h3>
+           <div class="com-md-8">
+
                <div class="expand-collapse">
 
                    <h3>Rule #1: Authors must have a track record of writing great content</h3>
@@ -138,16 +139,27 @@
 
                    <h3>Rule #8: Be patience!</h3>
                    <div>
-                       Our moderator will review your story after submit story! After following our rules fill your content then we will publish story soon.
+                       <p> Our moderator will review your story after submit story! After following our rules fill your content then we will publish story soon.
+                       </p>
                    </div>
 
                </div>
+           </div>
+           <div class="col-md-4">
+               <div class="addvertise mb-2" id="advertise-4"></div>
            </div>
            <div class="col-md-12 mt-4 text-center">
                <a href="{{route('story.create')}}" class="mb-0">
                    <button class="btn btn-success text-capitalize">Create awesome story</button>
                </a>
+
+               <div class="addvertise mb-2" id="advertise-3">
+
+               </div>
+
            </div>
+
+
 
        </div>
    </div>

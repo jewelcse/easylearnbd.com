@@ -40,6 +40,7 @@
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/admin/category')}}"><i class="far fa-user-circle"></i><span>Category</span></a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/admin/subscribers')}}"><i class="far fa-user-circle"></i><span>Subscribers</span></a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/admin/contact-list')}}"><i class="far fa-user-circle"></i><span>All Contacts</span></a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="https://disqus.com/by/disqus_uqAhm3KPoP/" target="_blank"><i class="far fa-user-circle"></i><span>Comments</span></a></li>
             </ul>
             <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
         </div>

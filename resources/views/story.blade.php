@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 {{--    {{url()->current()}}--}}
 
@@ -121,11 +123,16 @@
                 </ul>
             </div>
             <!-- End Tags -->
+            <div class="addvertise mb-2" id="advertise-3"></div>
+            <div id="disqus_thread"></div>
 
         </div>
         <!-- End Post -->
 
         <div class="col-md-2 col-xs-12">
+
+            <div class="addvertise mb-2" id="advertise-1"></div>
+            <div class="addvertise" id="advertise-2"></div>
 
         </div>
 
@@ -217,3 +224,5 @@
 <!-- End AlertBar -->
 
 @endsection
+
+

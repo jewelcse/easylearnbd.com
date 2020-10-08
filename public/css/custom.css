@@ -79,9 +79,47 @@ form.example::after {
     padding-left: 10px;
 }
 
+.expand-collapse {
+    max-width: 750px;
+}
 
-/*@media (min-width: 576px) {*/
-/*    .modal .modal-dialog .modal-content{*/
-/*        width: 300px;*/
-/*    }*/
-/*}*/
+/*
+advertisement code
+ */
+
+.addvertise{
+    width: 100%;
+    background-color: #0f74a8;
+}
+#advertise-1{
+    margin-top: 150px;
+    height: 400px;
+}
+
+#advertise-2{
+    margin-top: 50px;
+    height: 400px;
+}
+
+#advertise-3{
+    margin-top: 20px;
+    height: 200px;
+}
+
+#advertise-4{
+    margin-top: 20px;
+    height: 600px;
+}
+
+#advertise-5{
+    margin-top: 20px;
+    height: 600px;
+}
+#advertise-6{
+    margin-top: 20px;
+    height: 600px;
+}
+#advertise-7{
+    margin-top: 20px;
+    height: 300px;
+}

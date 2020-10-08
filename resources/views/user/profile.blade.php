@@ -48,6 +48,9 @@
                 <div class="card shadow mb-4">
 
                 </div>
+                <div class="addvertise mb-2" id="advertise-6">
+
+                </div>
             </div>
             <div class="col-lg-8">
                 <div class="row">

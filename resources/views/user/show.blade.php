@@ -41,5 +41,9 @@
     {{ $stories->links() }}
     </tbody>
 </table>
+
+    <div class="addvertise mb-2" id="advertise-7">
+
+    </div>
 </div>
 @endsection

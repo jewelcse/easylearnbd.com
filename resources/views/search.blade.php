@@ -68,6 +68,9 @@ height: 180px;" src="{{URL::to('/') }}/images/{{$story->img_name}}" alt="">
 
                 </div>
             </div>
+        <div class="addvertise mb-2" id="advertise-7">
+
+        </div>
         </div>
 
 
