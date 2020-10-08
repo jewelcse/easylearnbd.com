@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/GenerateSitemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/GenerateSitemap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category_stories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category_stories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/story.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +270,7 @@
       <workItem from="1602009031500" duration="3597000" />
       <workItem from="1602074337665" duration="12367000" />
       <workItem from="1602135219120" duration="4285000" />
-      <workItem from="1602144413308" duration="24920000" />
+      <workItem from="1602144413308" duration="28908000" />
     </task>
     <servers />
   </component>

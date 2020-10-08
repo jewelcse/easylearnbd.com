@@ -17,9 +17,19 @@
 
         <!-- Begin List Posts-->
         <section class="recent-posts">
+
+
             <div class="section-title">
                 <h2 class="text-white mb-4" style="background-color: #0f74a8;padding: 15px">{{$category_name}}</h2>
             </div>
+
+            @if($stories->count() == 0)
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center">No stories found! for- {{$category_name}}</h3>
+                    </div>
+                </div>
+            @endif
             <div class="card-columns listrecent">
             @foreach($stories as $story)
                 <!-- begin post -->

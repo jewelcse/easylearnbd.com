@@ -57,7 +57,7 @@
                     </p>
                     <ul>
                         <li>
-                            <a href="#comments">
+                            <a href="#disqus_thread">
                                 42
                                 <br/>
                                 <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
