@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Story;
 use App\Category;
+use Spatie\Sitemap\SitemapGenerator;
 /*
  * Authentication routes
  */
@@ -197,4 +198,10 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
 
 
+});
+
+
+Route::get('sitemap',function (){
+    SitemapGenerator::create('http://localhost/easylearnbd.com/public/')->writeToFile('sitemap.xml');
+    return "done";
 });
