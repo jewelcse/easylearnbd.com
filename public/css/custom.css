@@ -33,6 +33,7 @@ body.modal-open .bg{
     top: 50% !important;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 425px;
 }
 
 /* Style the search field */
@@ -79,7 +80,8 @@ form.example::after {
 }
 
 
-/*
-text animation
- */
-
+/*@media (min-width: 576px) {*/
+/*    .modal .modal-dialog .modal-content{*/
+/*        width: 300px;*/
+/*    }*/
+/*}*/
