@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Contact;
 use App\Story;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -112,6 +113,34 @@ class IndexController extends Controller
 
     public function createStoryRules(){
         return view('rules');
+    }
+
+    public function about(){
+        return view('pages.about');
+    }
+    public function priacy_policy(){
+        return view('pages.privacy-policy');
+    }
+    public function contact(){
+
+        return view('pages.contact');
+    }
+
+    public function contactFormStore(Request $request){
+        $request->validate([
+            'name'=>['required'],
+            'subject'=>['required'],
+            'email'=>['required', 'email']
+        ]);
+
+       Contact::create([
+            'name'=>$request->get('name'),
+            'subject'=>$request->get('subject'),
+            'email'=>$request->get('email'),
+            'message'=>$request->get('message'),
+        ]);
+
+        return back()->with('status','Submit Success');
     }
 
 

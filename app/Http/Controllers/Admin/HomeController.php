@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use App\Contact;
 use App\Http\Controllers\Controller;
 use App\Notifications\AuthorStoryApproved;
+use App\Notifications\ReplyContactNotify;
 use App\Notifications\SubscribersNotify;
 use App\Story;
 use App\Subscriber;
@@ -123,6 +125,41 @@ class HomeController extends Controller
         return view('admin.admin_story_review')
             ->with('story',$story)
             ->with('categories',$categories);
+    }
+
+    public function contactList(){
+        $contactLists = Contact::latest()->paginate(5);
+        return view('admin.contact-list',compact('contactLists'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function contactRemove($id){
+        Contact::findOrFail($id)->delete();
+        return back()->with('status','remove success');
+    }
+
+    public function contactView($id){
+        $contact = Contact::findOrFail($id);
+        return view('admin.contact-view',compact('contact'));
+    }
+
+    public function contactReply($id){
+        $contact = Contact::findOrFail($id);
+        return view('admin.contact-reply',compact('contact'));
+    }
+
+    public function contactReplyAction(Request $request){
+
+//        Notification::route('mail',$request->to_email)
+//            ->notify(new ReplyContactNotify($request));
+
+        //notify(new ReplyContactNotify($request));
+
+        Notification::route('mail', 'easylearnfrombd.com')
+            ->notify(new ReplyContactNotify($request));
+
+        return back()->with('status','replied success');
+
     }
 
 

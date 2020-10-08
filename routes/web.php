@@ -90,7 +90,13 @@ Route::post('/user/profile/update','UserController@updateUserProfile')
 Route::get('/', 'IndexController@index');
 Route::get('/c/{slug}', 'IndexController@storiesByCategory')->name('category.story');
 
-
+/*
+ *  Pages
+ */
+Route::get('/about','IndexController@about')->name('about');
+Route::get('/privacy-policy','IndexController@priacy_policy')->name('privacy-policy');
+Route::get('/contact','IndexController@contact')->name('contact');
+Route::post('/contact/store','IndexController@contactFormStore')->name('contact-form-submit');
 
 
 
@@ -154,7 +160,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
     Route::post('/category/delete/{id}','CategoryController@deleteCategory');// delete category
 
     Route::get('/subscribers','SubscriberController@fetchAllSubscriber');// all subscriber
-    Route::post('/subscribers/remove/{id}','SubscriberController@removeSubscriber');// all subscriber
+    Route::post('/subscribers/remove/{id}','SubscriberController@removeSubscriber');// remove subscriber
 
 
     /*
@@ -173,24 +179,22 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
     Route::get('/stories','HomeController@allStories');
     Route::get('/story/review/{id}','HomeController@reviewStory');
+
+
     //Route::get('/stories/publish','HomeController@storyPublishedAction');
     //Route::get('/stories/publish/{id}','HomeController@storyPublishedAction');
     Route::post('/stories/publish','HomeController@storyPublishedAction');
 
-//    Route::get('admin/story',function (){
-//        $story = Story::find(8);
-//        return $story->category->name;
-//    });
 
-//    Route::get('admin/story',function (){
-//        $category = Category::find(9);
-//        return $category->story->title;
-//    });
+    Route::get('/contact-list','HomeController@contactList');
+    Route::post('/contact-remove/{id}','HomeController@contactRemove');
+    Route::get('/contact/view/{id}','HomeController@contactView');
+    Route::get('/contact/reply/{id}','HomeController@contactReply');
+    Route::post('/contact/reply','HomeController@contactReplyAction');
 
 
     Route::get('/dashboard','HomeController@index')->name('home');//->middleware('guard.verified:admin,admin.verification.notice');
 
-    //Route::get('/', 'IndexController@index');
-    //Put all of your admin routes here...
+
 
 });

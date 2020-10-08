@@ -39,6 +39,7 @@
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('admin/stories')}}"><i class="fas fa-table"></i><span>Stories Table</span></a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/admin/category')}}"><i class="far fa-user-circle"></i><span>Category</span></a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/admin/subscribers')}}"><i class="far fa-user-circle"></i><span>Subscribers</span></a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/admin/contact-list')}}"><i class="far fa-user-circle"></i><span>All Contacts</span></a></li>
             </ul>
             <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
         </div>

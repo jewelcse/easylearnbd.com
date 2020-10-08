@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/contact-view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,25 +187,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\images" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\css" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\pages" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
+      <recent name="C:\xampp\htdocs\easylearnbd.com\public\assets\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin\story" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\htdocs\easylearnbd.com\app\Http\Controllers\Admin\Auth\Auth" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\assets\img" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset\img" />
-      <recent name="C:\xampp\htdocs\easylearnbd.com\public\asset" />
     </key>
   </component>
   <component name="RunManager">
@@ -267,7 +274,7 @@
       <workItem from="1602009031500" duration="3597000" />
       <workItem from="1602074337665" duration="12367000" />
       <workItem from="1602135219120" duration="4285000" />
-      <workItem from="1602144413308" duration="1183000" />
+      <workItem from="1602144413308" duration="15188000" />
     </task>
     <servers />
   </component>
@@ -323,10 +330,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="436" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1601476064623" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1602006320219">
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1602153337940">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602006320219" />
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602153337940" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1601997926104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
