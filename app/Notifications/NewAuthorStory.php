@@ -30,7 +30,7 @@ class NewAuthorStory extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -59,7 +59,8 @@ class NewAuthorStory extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            //
+            'id'=>$this->story->id,
+            'title'=>$this->story->title,
         ];
     }
 }

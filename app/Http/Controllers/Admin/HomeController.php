@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Admin;
 use App\Category;
 use App\Contact;
 use App\Http\Controllers\Controller;
 use App\Notifications\AuthorStoryApproved;
+use App\Notifications\NewAuthorStory;
 use App\Notifications\ReplyContactNotify;
 use App\Notifications\SubscribersNotify;
 use App\Story;
@@ -13,6 +15,7 @@ use App\Subscriber;
 use App\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Notification;
 
 class HomeController extends Controller
@@ -28,11 +31,15 @@ class HomeController extends Controller
         $unPubStoriesCount = Story::where('is_published',0)->count();
         $userCount = User::all()->count();
         $categoriesCount = Category::all()->count();
+
+//        $notifications = Admin::find(1)->notifications;
+//        $count = $notifications->count();
+
         $data = array(
             'pubStoriesCount' =>$pubStoriesCount,
             'unPubStoriesCount'=>$unPubStoriesCount,
             'userCount' =>$userCount,
-            'categoriesCount' =>$categoriesCount
+            'categoriesCount' =>$categoriesCount,
         );
 
         //return $data;
@@ -150,16 +157,109 @@ class HomeController extends Controller
 
     public function contactReplyAction(Request $request){
 
+       // return $request->all();
+
 //        Notification::route('mail',$request->to_email)
 //            ->notify(new ReplyContactNotify($request));
 
         //notify(new ReplyContactNotify($request));
 
-        Notification::route('mail', 'easylearnfrombd.com')
-            ->notify(new ReplyContactNotify($request));
+//        Notification::route('mail', $request->get('to_email'))
+//            ->notify(new ReplyContactNotify($request));
+        //Notification::send($request->get('to_email'),new ReplyContactNotify($request));
 
         return back()->with('status','replied success');
 
+    }
+
+    public function getNotificationCount(){
+        $notifications = Admin::find(1)->notifications;
+        $count = $notifications->count();
+        return response()->json(['count'=>$count]);
+    }
+
+    public function getNotifications(){
+
+        //$notifications = Admin::find(1)->notifications;
+        $notifications = Admin::find(1)->unreadNotifications;
+
+        $count = $notifications->count();
+
+        //return $notifications;
+        $html = '';
+
+        if ($count == 0){
+            $html .='
+                <a class="text-center dropdown-item small text-gray-500" href="#">There is no Notifications</a></div>
+                ';
+        }
+
+        
+        foreach ($notifications as $notification){
+            //echo $notification->id;
+           // $html .= '<p>New post Need to approved</p>';
+
+            if($notification->type == 'App\Notifications\NewSubscriber'){
+                $html .='
+
+            <a class="d-flex align-items-center dropdown-item" href="#">
+                                        <div class="mr-3">
+                                            <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                        </div>
+                                        <div><span class="small text-gray-500">'.$notification->created_at.'</span>
+                                            <p>A new Subscriber</p>
+                                        </div>
+            </a>
+
+';
+
+            }elseif($notification->type == 'App\Notifications\NewAuthorStory'){
+                $html .='
+
+            <a class="d-flex align-items-center dropdown-item" href="#">
+                                        <div class="mr-3">
+                                            <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                        </div>
+                                        <div><span class="small text-gray-500">'.$notification->created_at.'</span>
+                                            <p>A new stroy, need to approve</p>
+                                        </div>
+            </a>
+
+';
+
+            }
+
+            $notifications->markAsRead();
+
+
+
+//            $html .='
+//
+//            <a class="d-flex align-items-center dropdown-item" href="#">
+//                                        <div class="mr-3">
+//                                            <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+//                                        </div>
+//                                        <div><span class="small text-gray-500">'.$notification->created_at.'</span>
+//                                            <p>A new stroy, need to approve</p>
+//                                        </div>
+//            </a>
+//
+//';
+        }
+
+
+
+//        $print_array = array();
+//
+//        for($i=0;$notifications.size();$i++){
+//           echo $print_array[$i]=$notifications.title;
+//        }
+//
+//        //echo json_encode($print_array);
+
+        return response()->json(['html' => $html,'count'=>$count]);
+
+        //return response()->json(array('html' => $html,'count'=>$count));
     }
 
 

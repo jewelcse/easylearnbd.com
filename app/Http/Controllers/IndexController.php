@@ -129,6 +129,7 @@ class IndexController extends Controller
     public function contactFormStore(Request $request){
         $request->validate([
             'name'=>['required'],
+            'message'=>['required'],
             'subject'=>['required'],
             'email'=>['required', 'email']
         ]);
@@ -139,8 +140,8 @@ class IndexController extends Controller
             'email'=>$request->get('email'),
             'message'=>$request->get('message'),
         ]);
-
-        return back()->with('status','Submit Success');
+       
+        return back()->with('status','Send Message Success');
     }
 
 

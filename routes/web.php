@@ -195,8 +195,11 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
 
     Route::get('/dashboard','HomeController@index')->name('home');//->middleware('guard.verified:admin,admin.verification.notice');
+   // Route::get('/dashboard','HomeController@getNotificationCount')->name('home');//->middleware('guard.verified:admin,admin.verification.notice');
 
 
+    Route::get('/get/notification','HomeController@getNotifications');
+    //Route::get('/get-notification','HomeController@getNotifications');
 
 });
 

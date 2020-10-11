@@ -5,22 +5,21 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Notifications\Notification;
 
-class AuthorStoryApproved extends Notification implements ShouldQueue
+class NewSubscriber extends Notification implements ShouldQueue
 {
     use Queueable;
-    public $story;
+    public $subscriberData;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($story)
+    public function __construct($subscriber)
     {
-        $this->story = $story;
+        $this->subscriberData = $subscriber;
     }
 
     /**
@@ -31,7 +30,7 @@ class AuthorStoryApproved extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -43,13 +42,10 @@ class AuthorStoryApproved extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-
-            ->subject('Congratulations! Your Story has been successfully approved.')
-            ->greeting('Hello '.$this->story->user->first_name." ".$this->story->user->first_name)
-            ->line('Your Post Approved. Now your post appear our Home page!')
-            ->line("Title: ".$this->story->title)
-            ->action('View', url('/story/',$this->story->slug))
-            ->line('Thank you!');
+                    ->greeting('Hello Admin')
+                    ->subject('New Subscriber!')
+                    ->line('A new subscriber added our list')
+                    ->line('Subscriber Email: ',$this->subscriberData->email);
     }
 
     /**
@@ -61,7 +57,7 @@ class AuthorStoryApproved extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            //
+            'email'=>$this->subscriberData->email
         ];
     }
 }

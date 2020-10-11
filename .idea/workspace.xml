@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,9 +24,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2542a0f0-c4cc-466c-83c8-c32f9d5e53ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category_stories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category_stories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stories/author_single_story.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/story.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/story.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubscriberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubscriberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscriberController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/AuthorStoryApproved.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/AuthorStoryApproved.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/NewAuthorStory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/NewAuthorStory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dummy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dummy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,10 +192,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -270,7 +280,14 @@
       <workItem from="1602009031500" duration="3597000" />
       <workItem from="1602074337665" duration="12367000" />
       <workItem from="1602135219120" duration="4285000" />
-      <workItem from="1602144413308" duration="28908000" />
+      <workItem from="1602144413308" duration="36986000" />
+      <workItem from="1602187283810" duration="1866000" />
+      <workItem from="1602333299719" duration="5669000" />
+      <workItem from="1602345379321" duration="611000" />
+      <workItem from="1602345535937" duration="7523000" />
+      <workItem from="1602362403696" duration="2449000" />
+      <workItem from="1602365801397" duration="941000" />
+      <workItem from="1602436344576" duration="2361000" />
     </task>
     <servers />
   </component>
@@ -290,18 +307,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="428" y="187" key="#Notifications" timestamp="1602345953050">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="428" y="187" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1602345953050" />
     <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1601224065060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601224065060" />
-    <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599544580892">
+    <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602360387830">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1599544580892" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602010172566">
+    <state x="424" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602360387830" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602358961688">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602010172566" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602358961688" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1602364147881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1602364147881" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1601105275596">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -330,13 +355,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602153337940" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1602364401940">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1602364401940" />
+    <state x="530" y="277" key="VCS.ChangelistChooser" timestamp="1602364097492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="530" y="277" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1602364097492" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1601997926104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1601997926104" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1601495861195">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602438155730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1601495861195" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602438155730" />
   </component>
 </project>
